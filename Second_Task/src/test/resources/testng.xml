@@ -1,9 +1,0 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Cucumber Parallel Suite" verbose="2" parallel="false" >
-    <test name="Login Tests">
-        <classes>
-            <class name="runners.TestRunner"/>
-        </classes>
-    </test>
-
-</suite>
