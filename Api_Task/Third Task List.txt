@@ -1,0 +1,30 @@
+1. Validate API Works (Basic Status Check)
+Test Objective: Verify that the API is up and running.
+Test Steps: Send a GET request with a valid name parameter (naira), and check that the status code is 200 (OK).
+
+2. Validate Returned Parameters
+Test Objective: Ensure that the API returns the expected fields in the response body.
+Test Steps: Send a GET request with the name parameter and validate the response contains name, age, and count keys.
+
+3. Validate Logic of Parameters
+Test Objective: Verify that the returned name, age, and count parameters follow correct logic.
+Test Steps: Extract and validate:
+name matches the provided name parameter.
+age is greater than 0.
+count is greater than 0.
+
+4. Validate Response Not Affected by Invalid Parameters
+Test Objective: Ensure the API response is not affected when an invalid parameter (WrongParam) is sent.
+Test Steps: Send a request with a valid name and an invalid parameter and validate the status code is still 200 and the returned data is valid.
+
+5. Validate When Sending Request Without name Parameter
+Test Objective: Ensure that the API responds with an error when the required name parameter is missing.
+Test Steps: Send a request without the name parameter and verify that the status code is not 200.
+
+6. Test for Invalid Names (Wrong Names Should Not Return Data)
+Test Objective: Ensure that invalid names (empty, special characters, or non-English characters) do not return valid age or count data.
+Test Steps: Test with various invalid names and assert that the API returns age as null and count as 0.
+
+7. Test Performance (Response Time)
+Test Objective: Verify that the API response time is under an acceptable limit.
+Test Steps: Send a request with a valid name and measure the response time. Assert that the response time is less than 2000 ms.
